@@ -2,7 +2,7 @@ version: '3'
 
 services: 
   flaskapp:
-     build: ./New
+     build: ./flask-docker
      ports:
       - "8000:8000"
      network_mode: host

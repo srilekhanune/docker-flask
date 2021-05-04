@@ -3,6 +3,8 @@ from flask import Flask, render_template, request
 from s3_store import upload_file
 
 
+
+
 application= app = Flask(__name__)
 UPLOAD_FOLDER = "uploads"
 BUCKET = "faceimag"
@@ -22,4 +24,4 @@ def upload():
       return 'file uploaded successfully'
         
 if __name__ == '__main__':
-   app.run(port=5000,debug = True)
+   app.run(port=8000,host="0.0.0.0",debug = True)

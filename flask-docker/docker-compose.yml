@@ -1,7 +1,7 @@
 version: '3'
 
 services: 
-  flaskapp:
+  flaskweb:
      build: ./flask-docker
      ports:
       - "8000:8000"

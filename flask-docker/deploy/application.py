@@ -5,15 +5,21 @@ from s3_store import upload_file
 
 
 
-application= app = Flask(__name__)
+application= app = Flask(__name__, )
 UPLOAD_FOLDER = "uploads"
 BUCKET = "faceimag"
+
+
+
+
 
 @app.route('/')
 @app.route('/imageUpload')
 def upload_image():
    return render_template('upload.html')
-    
+
+
+
 @app.route('/imageUploader', methods = ['GET', 'POST'])
 def upload():
    if request.method == 'POST':
